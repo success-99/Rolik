@@ -12,7 +12,7 @@ from django.shortcuts import render
 
 @login_required(login_url='login')
 def roll_view(request):
-    roliklar = models.Rolik.objects.all().order_by('-id')
+    roliklar = models.Rolik.objects.all().order_by('id')
     inroliks_to_update = models.InRolik.objects.filter(
         roliktime__lt=timezone.now(),  # roliktime tugagan
         status='started'  # statusi 'going_on'

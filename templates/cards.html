@@ -1,9 +1,5 @@
 {% extends 'base.html' %}
 <style>
-.container {
-    max-width: 100%;
-}
-
 body {
     font-family: Arial, sans-serif;
 }
@@ -11,16 +7,15 @@ body {
 #timeButtons {
     margin-top: 10px;
 }
-
-
 </style>
 {% block content %}
 {% if user.is_authenticated %}
+<br><br><br>
 <form method="post" action="{% url 'logout' %}">
     {% csrf_token %}
-    <button type="submit">Chiqish</button>
+    <button type="submit" class="ml-5" style="">Chiqish</button>
 </form>
-<div class="container mt-5">
+<div class="container1 m-5">
     <div class="row">
         {% for rolik in roliklar %}
         <div class="col-12 col-sm-6 col-md-4">
