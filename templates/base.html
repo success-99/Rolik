@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <title>{% block title %}Rolik{% endblock %}</title>
+</head>
+<body>
+  <main>
+
+    {% block content %}
+    {% endblock %}
+  </main>
+<script>
+    // Sahifani har 20 sekundda yangilash
+    setInterval(function() {
+        location.reload();
+    }, 50000);
+</script>
+</body>
+</html>
