@@ -22,10 +22,10 @@ body {
             <br>
             <div class="card {% if rolik.inrolik.first.status == 'started' %}bg-success{% elif rolik.inrolik.first.status == 'finished' %}bg-danger{% endif %}">
                 <div class="card-body">
-                    <h2 class="card-title"><a href="{% url 'update-roll' rolik.id  %}" style="text-decoration: none;color:yellow;">Nomeri {{ rolik.rolik_num }}</a></h2>
+                    <h1 class="card-title"><a href="{% url 'update-roll' rolik.id  %}" style="text-decoration: none;color:#000080;">Nomeri {{ rolik.rolik_num }}</a></h1>
 
-                    <h3 class="card-title">O'lchami {{ rolik.rolik_size }}</h3>
-                    <h3 class="card-1"> {{ rolik.inrolik.first.roliktime |date:"d.m.Y H:i" }}</h3>
+                    <h2 class="card-title">O'lchami {{ rolik.rolik_size }}</h2>
+                    <h2 class="card-1"> {{ rolik.inrolik.first.roliktime |date:"H:i" }}</h2>
                     <h3 class="card-1"> {{ rolik.inrolik.first.rolik_pay|floatformat:3 }} so'm</h3>
 
                 </div>

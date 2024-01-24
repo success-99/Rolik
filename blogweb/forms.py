@@ -13,9 +13,10 @@ class AddRollForm(forms.ModelForm):
 
 class UpdateInRollForm(forms.ModelForm):
     PAY_CHOICES = (
-        (10, '10 ming'),
+        (12, '12 ming'),
         (15, '15 ming'),
-        (20, '20 ming')
+        (20, '20 ming'),
+        (30, '30 ming')
     )
     roliktime = forms.DateTimeField(initial=timezone.now(),
         input_formats=['%Y-%m-%dT%H:%M'],
