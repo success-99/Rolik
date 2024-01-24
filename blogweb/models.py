@@ -15,7 +15,7 @@ class Rolik(models.Model):
         (WHITE, WHITE)
     )
 
-    rolik_num = models.PositiveIntegerField()
+    rolik_num = models.CharField(max_length=50, unique=True)
     rolik_size = models.CharField(max_length=50)
     rolik_color = models.CharField(max_length=30, choices=COLORS_CHOICES, default=WHITE)
 

@@ -17,7 +17,7 @@ class UpdateInRollForm(forms.ModelForm):
         (15, '15 ming'),
         (20, '20 ming')
     )
-    roliktime = forms.DateTimeField(
+    roliktime = forms.DateTimeField(initial=timezone.now(),
         input_formats=['%Y-%m-%dT%H:%M'],
         widget=forms.DateTimeInput(
             attrs={'type': 'datetime-local', 'class': 'form-control'},
@@ -38,6 +38,6 @@ class UpdateInRollForm(forms.ModelForm):
         now = timezone.now()
 
         if roliktime and roliktime < now:
-            raise forms.ValidationError("Hozirgi vaqtdan kam kiritib bo'lmaydi.")
+            raise forms.ValidationError("Hozirgi vaqtdan keingi keladigan vaqtni kiriting.")
 
         return roliktime

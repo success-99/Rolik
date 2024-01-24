@@ -38,7 +38,13 @@ body {
         {% endfor %}
     </div>
 </div>
+<!--<script>-->
+<!--            const currentServerTime = new Date("{{ rolik.inrolik.first.rolik }}").getTime();-->
 
+<!--            setTimeout(function() {-->
+<!--                location.reload();-->
+<!--            }, currentServerTime - new Date().getTime());-->
+<!--</script>-->
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">Log In</a>
